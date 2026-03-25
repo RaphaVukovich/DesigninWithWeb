@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Footlica — Soccer Jerseys</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style (2).css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <a href="#" class="logo">Footlica</a>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">New Arrivals</a>
+      <a href="#">Retro</a>
+      <a href="#">Kids</a>
+    </nav>
+    <!-- J'ai utilisé l'IA pour code la logique de recherche sémantique -->
+    <input type="text" class="search" placeholder="Search jerseys..." />
+    <button class="cart-btn"><i class="fas fa-shopping-bag"></i> <span class="cart-count">0</span></button>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div>
+      <p class="label">New Collection</p>
+      <h1>Season 2025–26</h1>
+      <p class="sub">Authentic jerseys from every league. Free worldwide shipping.</p>
+      <a href="#products" class="btn">Shop Now →</a>
+    </div>
+    <!-- l'image débordait sans ça -->
+    <img src="Capture d'écran 2026-03-19 140816.png" alt="Chelsea 2025-26" style="width: 260px; object-fit: contain;" />
+  </section>
+
+  <!-- Produits -->
+  <!-- J'ai utilisé l'IA pour coder le tri des produits par score de recommandation -->
+  <section id="products">
+    <h2>Featured Jerseys</h2>
+    <div class="grid">
+
+      <div class="card" data-item="27845231" data-sold="1312" data-crumb="Premier League > Liverpool">
+        <div class="card-img">
+          <img src="Capture d'écran 2026-03-19 140748.png" alt="Liverpool White Casual" />
+          <span class="tag">NEW</span>
+        </div>
+        <div class="card-info">
+          <p class="club">Liverpool · 2025-26</p>
+          <p class="name">White Casual Edition Fans Training</p>
+          <div class="card-row">
+            <span class="price">US$ 14.50</span>
+            <button class="add-btn"><i class="fas fa-plus"></i></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" data-item="27955512" data-sold="1428" data-crumb="Premier League > Chelsea">
+        <div class="card-img">
+          <img src="Capture d'écran 2026-03-19 140816.png" alt="Chelsea Home" />
+          <span class="tag">NEW</span>
+        </div>
+        <div class="card-info">
+          <p class="club">Chelsea · 2025-26</p>
+          <p class="name">Home 1:1 Fans Soccer Jersey</p>
+          <div class="card-row">
+            <span class="price">US$ 14.50</span>
+            <button class="add-btn"><i class="fas fa-plus"></i></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" data-item="28012445" data-sold="876" data-crumb="La Liga > Sevilla">
+        <div class="card-img">
+          <img src="Capture d'écran 2026-03-19 140915.png" alt="Sevilla Training" />
+          
+        </div>
+        <div class="card-info">
+          <p class="club">Sevilla · 2025-26</p>
+          <p class="name">White Black Training Shirt</p>
+          <div class="card-row">
+            <span class="price">US$ 14.50</span>
+            <button class="add-btn"><i class="fas fa-plus"></i></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" data-item="28156789" data-sold="643" data-crumb="Brasileirao > Flamengo">
+        <div class="card-img">
+          <img src="IMAGE DW.png" alt="Flamengo Home Women" />
+          <span class="tag">NEW</span>
+        </div>
+        <div class="card-info">
+          <p class="club">Flamengo · 2026-27</p>
+          <p class="name">Home Women Soccer Jersey</p>
+          <div class="card-row">
+            <span class="price">US$ 14.50</span>
+            <button class="add-btn"><i class="fas fa-plus"></i></button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+ <!-- Bannière retro -->
+  <section class="retro-banner">
+    <div>
+      <p class="label">Limited Edition</p>
+      <h2>Retro Collection</h2>
+      <p>Vintage jerseys from the greatest eras of football.</p>
+      <a href="#" class="btn btn-white">Explore →</a>
+    </div>
+    <img src="Capture d'écran 2026-03-19 140846.png" alt="Cadiz Retro 1991-92" />
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p><strong>Footlica</strong> — © 2025. All rights reserved.</p>
+  </footer>
+
+  <!-- J'ai utilisé l'IA pour générer la logique de calcul de prix selon les options -->
+  <div class="modal-overlay" id="modal">
+    <div class="modal">
+      <button class="modal-close" id="modalClose">✕</button>
+      <img src="" alt="" id="modalImg" />
+      <div class="modal-info">
+        <p class="modal-crumb" id="modalCrumb"></p>
+        <h3 id="modalName"></h3>
+        <p class="modal-meta" id="modalMeta"></p>
+        <p class="modal-price" id="modalPrice"></p>
+
+        <div class="opt-group">
+          <label>Size</label>
+          <div class="opt-row size-row">
+            <button class="opt-btn" data-extra="0">S</button>
+            <button class="opt-btn" data-extra="0">M</button>
+            <button class="opt-btn active" data-extra="0">L</button>
+            <button class="opt-btn" data-extra="0">XL</button>
+            <button class="opt-btn" data-extra="0">XXL</button>
+            <button class="opt-btn" data-extra="1">3XL <span>+$1</span></button>
+            <button class="opt-btn" data-extra="1">4XL <span>+$1</span></button>
+          </div>
+        </div>
+
+        <div class="opt-group">
+          <label>Sponsor patch</label>
+          <div class="opt-row sponsor-row">
+            <button class="opt-btn" data-extra="1">Patch A <span>+$1</span></button>
+            <button class="opt-btn" data-extra="1">Patch B <span>+$1</span></button>
+            <button class="opt-btn active" data-extra="0">None</button>
+          </div>
+        </div>
+
+        <div class="opt-group">
+          <label>Badge</label>
+          <div class="opt-row badge-row">
+            <button class="opt-btn" data-extra="2">Liga <span>+$2</span></button>
+            <button class="opt-btn" data-extra="2">Cup <span>+$2</span></button>
+            <button class="opt-btn active" data-extra="0">None</button>
+          </div>
+        </div>
+
+        <button class="btn btn-full" id="modalAdd">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+var modal = document.getElementById('modal');
+    var basePrice = 14.50;
+
+    // J'ai utilisé l'IA pour cette fonction — je savais pas comment récupérer le bon bouton actif
+    function refreshPrice() {
+      var sizeExtra = parseFloat(document.querySelector('.size-row .opt-btn.active').dataset.extra);
+      var sponsorExtra = parseFloat(document.querySelector('.sponsor-row .opt-btn.active').dataset.extra);
+      var badgeExtra = parseFloat(document.querySelector('.badge-row .opt-btn.active').dataset.extra);
+      var total = basePrice + sizeExtra + sponsorExtra + badgeExtra;
+      document.getElementById('modalPrice').textContent = 'US$ ' + total.toFixed(2);
+    }
+
+    document.querySelectorAll('.card').forEach(function(card) {
+      card.addEventListener('click', function(e) {
+        if (e.target.closest('.add-btn')) return;
+
+        document.getElementById('modalImg').src = card.querySelector('.card-img img').src;
+        document.getElementById('modalName').textContent = card.querySelector('.name').textContent;
+        document.getElementById('modalCrumb').textContent = 'Home > ' + card.dataset.crumb;
+        document.getElementById('modalMeta').textContent = 'Item ' + card.dataset.item + ' · ✔ Sold (' + card.dataset.sold + ')';
+        basePrice = parseFloat(card.querySelector('.price').textContent.replace('US$ ', ''));
+        // console.log('basePrice:', basePrice);
+
+        // reset des options à chaque ouverture
+        var rows = ['.size-row', '.sponsor-row', '.badge-row'];
+        rows.forEach(function(sel) {
+          document.querySelectorAll(sel + ' .opt-btn').forEach(function(b, i) {
+            b.classList.toggle('active', i === 2);
+          });
+        });
+
+        refreshPrice();
+        modal.classList.add('open');
+        document.body.style.overflow = 'hidden';
+      });
+    });
+
+    function closeModal() {
+      modal.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    document.getElementById('modalClose').addEventListener('click', closeModal);
+    modal.addEventListener('click', function(e) { if (e.target === modal) closeModal(); });
+    document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeModal(); });
+
+    document.querySelectorAll('.opt-row').forEach(function(row) {
+      row.querySelectorAll('.opt-btn').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          row.querySelectorAll('.opt-btn').forEach(function(b) { b.classList.remove('active'); });
+          btn.classList.add('active');
+          refreshPrice();
+        });
+      });
+    });
+
+    document.getElementById('modalAdd').addEventListener('click', function() {
+      var el = document.querySelector('.cart-count');
+      el.textContent = parseInt(el.textContent) + 1;
+      closeModal();
+    });
+  </script>
+
+</body>
+</html>
